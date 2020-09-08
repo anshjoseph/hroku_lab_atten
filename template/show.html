@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Cs_it Attendence</title>
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+    </head>
+    <body>
+        <h1 class="text-center mt-3">Cs It Attendence</h1>
+        <br>
+        <br>
+        <h3 class="ml-4">Computer Science</h3>
+        <ol class="list-group container">
+        {% for name in data %}
+         
+        {% if name.cs == True %}
+
+        <li class="list-group-item"><h4>    {{name}} CS  </li></h4>
+        {% endif %}
+      
+        {% endfor %}
+        </ol>
+        <br>
+        <br>
+        <h3 class="ml-4">Imformation technology</h3>
+        <ol class="list-group container">
+        {% for name in data %}
+         
+        {% if name.cs == False %}
+            <li class="list-group-item"><h4> {{name}} IT </li></h4>
+        {% endif %}
+        {% endfor %}
+        </ol>
+        <script src="/static/js/jquery-3.5.1.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+    </body>
+</html>
